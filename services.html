@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - FinFlow Wealth Hub</title>
+  <link rel="stylesheet" href="services.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">FinFlow</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Our Financial Services</h1>
+      <p>Explore our comprehensive range of loan products designed to meet your financial needs.</p>
+    </div>
+  </section>
+
+  <!-- Tab Navigation -->
+  <section class="tab-section">
+    <div class="container">
+      <div class="tabs">
+        <div class="tab active" data-tab="home-loan">
+          <img src="images/home-icon.svg" alt="Home Loan" />
+          Home Loan
+        </div>
+        <div class="tab" data-tab="gold-loan">
+          <img src="images/gold-icon.svg" alt="Gold Loan" />
+          Gold Loan
+        </div>
+        <div class="tab" data-tab="property-loan">
+          <img src="images/property-icon.svg" alt="Property Loan" />
+          Property Loan
+        </div>
+        <div class="tab" data-tab="equity-loan">
+          <img src="images/equity-icon.svg" alt="Home Equity" />
+          Home Equity
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Details -->
+  <section class="service-details">
+    <div class="container">
+      <!-- Home Loan -->
+      <div id="home-loan" class="tab-content">
+        <div class="details-row">
+          <div class="details-content">
+            <h2 class="details-title">
+              <img src="images/home-icon.svg" alt="Home Loan" /> Home Loan
+            </h2>
+            <p class="details-subtitle">Turn your dream home into reality with our flexible home loan options</p>
+            <p class="details-description">
+              Our home loans are designed to help you purchase your dream home with ease. Whether you're a first-time homebuyer or looking to refinance, we offer competitive interest rates and flexible repayment terms.
+            </p>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-check-circle"></i> Features & Benefits</h3>
+              <ul>
+                <li>Loan amounts from ₹5 lakhs to ₹5 crores</li>
+                <li>Competitive interest rates starting from 8.50% p.a.</li>
+                <li>Repayment tenure up to 30 years</li>
+                <li>Quick processing and approval</li>
+                <li>Minimal documentation</li>
+                <li>No prepayment charges</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-list-check"></i> Eligibility Criteria</h3>
+              <ul>
+                <li>Age: 21 to 65 years</li>
+                <li>Minimum income: ₹25,000 per month</li>
+                <li>Good credit score (preferably 700+)</li>
+                <li>Stable employment history</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-file-alt"></i> Required Documents</h3>
+              <ul>
+                <li>Identity & address proof (Aadhar, PAN, Voter ID)</li>
+                <li>Income proof (Salary slips, Form 16, ITR)</li>
+                <li>Property documents</li>
+                <li>Bank statements for the last 6 months</li>
+              </ul>
+            </div>
+          </div>
+          <div class="calculator">
+            <h3>Calculate Your EMI</h3>
+            <p>Calculate your monthly EMI, total payment, and total interest</p>
+            <div class="calc-row">
+              <label for="loan-amount">Loan Amount</label>
+              <input type="range" id="loan-amount" min="500000" max="50000000" step="100000" value="25250000" class="slider">
+              <div class="slider-labels">
+                <span>₹5,00,000</span>
+                <span id="loan-amount-value">₹2,52,50,000</span>
+                <span>₹5,00,00,000</span>
+              </div>
+            </div>
+            <div class="calc-row">
+              <label for="interest-rate">Interest Rate (%)</label>
+              <input type="number" id="interest-rate" min="5" max="15" step="0.1" value="8.5">
+            </div>
+            <div class="calc-row">
+              <label for="loan-tenure">Loan Tenure (Years)</label>
+              <input type="range" id="loan-tenure" min="5" max="30" step="1" value="17" class="slider">
+              <div class="slider-labels">
+                <span>5 years</span>
+                <span id="loan-tenure-value">17 years</span>
+                <span>30 years</span>
+              </div>
+            </div>
+            <div class="calculator-result">
+              <div class="result-row">
+                <div>Monthly EMI:</div>
+                <div id="monthly-emi">₹2,34,394</div>
+              </div>
+              <div class="result-row">
+                <div>Total Interest:</div>
+                <div id="total-interest">₹2,25,66,326</div>
+              </div>
+              <div class="result-row">
+                <div>Total Payment:</div>
+                <div id="total-payment">₹4,78,16,326</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="check-eligibility-form">
+          <div class="calculator">
+            <h3>Check Your Eligibility</h3>
+            <p>Find out if you qualify for our Home Loan</p>
+            <form id="eligibility-form">
+              <div class="form-row">
+                <label for="monthly-income">Monthly Income (₹)</label>
+                <input type="number" id="monthly-income" placeholder="Enter your monthly income">
+              </div>
+              <div class="form-row">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age">
+              </div>
+              <div class="form-row">
+                <label for="employment-type">Employment Type</label>
+                <select id="employment-type">
+                  <option value="">Select employment type</option>
+                  <option value="salaried">Salaried</option>
+                  <option value="self-employed">Self-employed</option>
+                  <option value="business">Business Owner</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="existing-emi">Existing Monthly EMI (₹)</label>
+                <input type="number" id="existing-emi" placeholder="Enter existing EMI amount (if any)">
+              </div>
+              <div class="form-row">
+                <label for="credit-score">Credit Score</label>
+                <input type="number" id="credit-score" placeholder="Enter your credit score">
+              </div>
+              <button type="submit" id="check-eligibility-btn" class="btn btn-primary" style="width: 100%;">Check Eligibility</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gold Loan -->
+      <div id="gold-loan" class="tab-content" style="display: none;">
+        <div class="details-row">
+          <div class="details-content">
+            <h2 class="details-title">
+              <img src="images/gold-icon.svg" alt="Gold Loan" /> Gold Loan
+            </h2>
+            <p class="details-subtitle">Quick cash against your gold assets with minimal documentation</p>
+            <p class="details-description">
+              Our gold loans provide you with quick access to funds by leveraging your gold assets. With minimal documentation and fast processing, you can get instant liquidity for your immediate financial needs.
+            </p>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-check-circle"></i> Features & Benefits</h3>
+              <ul>
+                <li>Loan amounts from ₹10,000 to ₹50 lakhs</li>
+                <li>Competitive interest rates starting from 9.50% p.a.</li>
+                <li>Loan tenure from 3 months to 3 years</li>
+                <li>Quick disbursement within 30 minutes</li>
+                <li>Minimal documentation</li>
+                <li>No credit score check required</li>
+                <li>Multiple repayment options</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-list-check"></i> Eligibility Criteria</h3>
+              <ul>
+                <li>Age: 18 years and above</li>
+                <li>Must be the owner of the gold assets</li>
+                <li>Gold purity should be 18-22 carats</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-file-alt"></i> Required Documents</h3>
+              <ul>
+                <li>Identity proof (Aadhar, PAN, Voter ID)</li>
+                <li>Address proof</li>
+                <li>Passport size photograph</li>
+                <li>Gold ornaments to be pledged</li>
+              </ul>
+            </div>
+          </div>
+          <div class="calculator">
+            <h3>Gold Loan Value Calculator</h3>
+            <p>Calculate the loan amount you can get against your gold</p>
+            <div class="calc-row">
+              <label for="gold-weight">Gold Weight (grams)</label>
+              <input type="number" id="gold-weight" min="1" max="1000" value="100">
+            </div>
+            <div class="calc-row">
+              <label for="gold-purity">Gold Purity (carats)</label>
+              <select id="gold-purity">
+                <option value="24">24 carat</option>
+                <option value="22" selected>22 carat</option>
+                <option value="20">20 carat</option>
+                <option value="18">18 carat</option>
+              </select>
+            </div>
+            <div class="calc-row">
+              <label for="gold-rate">Current Gold Rate (₹/gram)</label>
+              <input type="number" id="gold-rate" min="5000" max="7000" value="5500">
+            </div>
+            <div class="calculator-result">
+              <div class="result-row">
+                <div>Market Value:</div>
+                <div id="gold-market-value">₹5,50,000</div>
+              </div>
+              <div class="result-row">
+                <div>Eligible Loan Amount:</div>
+                <div id="gold-loan-amount">₹4,12,500</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property Loan -->
+      <div id="property-loan" class="tab-content" style="display: none;">
+        <div class="details-row">
+          <div class="details-content">
+            <h2 class="details-title">
+              <img src="images/property-icon.svg" alt="Property Loan" /> Property Loan
+            </h2>
+            <p class="details-subtitle">Leverage your property to secure funds for your various needs</p>
+            <p class="details-description">
+              Our property loans allow you to unlock the value of your existing property to meet your financial requirements. Whether it's for business expansion, education, or major expenses, we offer flexible loan options against your property.
+            </p>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-check-circle"></i> Features & Benefits</h3>
+              <ul>
+                <li>Loan amounts from ₹10 lakhs to ₹10 crores</li>
+                <li>Competitive interest rates starting from 9.00% p.a.</li>
+                <li>Repayment tenure up to 15 years</li>
+                <li>Loan against residential or commercial property</li>
+                <li>Flexible repayment options</li>
+                <li>Part-payment and foreclosure allowed</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-list-check"></i> Eligibility Criteria</h3>
+              <ul>
+                <li>Age: 25 to 70 years</li>
+                <li>Must be the owner of the property</li>
+                <li>Stable income source</li>
+                <li>Good credit score (preferably 650+)</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-file-alt"></i> Required Documents</h3>
+              <ul>
+                <li>Identity & address proof</li>
+                <li>Income proof</li>
+                <li>Property documents (title deed, tax receipts)</li>
+                <li>Bank statements for the last 6 months</li>
+                <li>Photographs of the property</li>
+              </ul>
+            </div>
+          </div>
+          <div class="calculator">
+            <h3>Property Loan Calculator</h3>
+            <p>Calculate your loan eligibility based on property value</p>
+            <div class="calc-row">
+              <label for="property-value">Property Value (₹)</label>
+              <input type="range" id="property-value" min="1000000" max="100000000" step="1000000" value="50000000" class="slider">
+              <div class="slider-labels">
+                <span>₹10 Lakhs</span>
+                <span id="property-value-display">₹5 Crores</span>
+                <span>₹10 Crores</span>
+              </div>
+            </div>
+            <div class="calc-row">
+              <label for="property-age">Property Age (years)</label>
+              <input type="number" id="property-age" min="0" max="50" value="10">
+            </div>
+            <div class="calc-row">
+              <label for="property-type">Property Type</label>
+              <select id="property-type">
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+                <option value="industrial">Industrial</option>
+              </select>
+            </div>
+            <div class="calculator-result">
+              <div class="result-row">
+                <div>Maximum Loan Amount:</div>
+                <div id="max-property-loan">₹3,50,00,000</div>
+              </div>
+              <div class="result-row">
+                <div>Maximum Monthly EMI:</div>
+                <div id="max-property-emi">₹3,22,546</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Equity Loan -->
+      <div id="equity-loan" class="tab-content" style="display: none;">
+        <div class="details-row">
+          <div class="details-content">
+            <h2 class="details-title">
+              <img src="images/equity-icon.svg" alt="Home Equity" /> Home Equity Loan
+            </h2>
+            <p class="details-subtitle">Tap into your home's equity for major expenses and investments</p>
+            <p class="details-description">
+              Our home equity loans allow you to access the equity you've built in your home. These funds can be used for home improvements, education expenses, debt consolidation, or any other financial need.
+            </p>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-check-circle"></i> Features & Benefits</h3>
+              <ul>
+                <li>Loan amounts up to 80% of your home equity</li>
+                <li>Interest rates starting from 8.75% p.a.</li>
+                <li>Repayment tenure up to 20 years</li>
+                <li>Tax benefits on interest paid</li>
+                <li>Flexible repayment options</li>
+                <li>No restrictions on end-use of funds</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-list-check"></i> Eligibility Criteria</h3>
+              <ul>
+                <li>Age: 25 to 70 years</li>
+                <li>Must be the owner of the property</li>
+                <li>Property should be fully constructed and habitable</li>
+                <li>Minimum income requirements based on loan amount</li>
+                <li>Good credit history</li>
+              </ul>
+            </div>
+            <div class="features-list">
+              <h3><i class="fa-solid fa-file-alt"></i> Required Documents</h3>
+              <ul>
+                <li>Identity & address proof</li>
+                <li>Income documents</li>
+                <li>Property ownership documents</li>
+                <li>Home valuation report</li>
+                <li>Existing mortgage details (if any)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="calculator">
+            <h3>Home Equity Loan Calculator</h3>
+            <p>Calculate how much you can borrow based on your home equity</p>
+            <div class="calc-row">
+              <label for="home-value">Current Home Value (₹)</label>
+              <input type="range" id="home-value" min="1000000" max="100000000" step="1000000" value="50000000" class="slider">
+              <div class="slider-labels">
+                <span>₹10 Lakhs</span>
+                <span id="home-value-display">₹5 Crores</span>
+                <span>₹10 Crores</span>
+              </div>
+            </div>
+            <div class="calc-row">
+              <label for="mortgage-balance">Remaining Mortgage Balance (₹)</label>
+              <input type="range" id="mortgage-balance" min="0" max="80000000" step="1000000" value="20000000" class="slider">
+              <div class="slider-labels">
+                <span>₹0</span>
+                <span id="mortgage-balance-display">₹2 Crores</span>
+                <span>₹8 Crores</span>
+              </div>
+            </div>
+            <div class="calculator-result">
+              <div class="result-row">
+                <div>Your Home Equity:</div>
+                <div id="home-equity">₹3,00,00,000</div>
+              </div>
+              <div class="result-row">
+                <div>Maximum Loan Amount:</div>
+                <div id="max-equity-loan">₹2,40,00,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Methods -->
+  <section class="payment-methods">
+    <div class="container">
+      <h2>Payment Methods</h2>
+      <p>We offer various convenient payment options to make your loan repayment hassle-free.</p>
+      <div class="payment-grid">
+        <div class="payment-card">
+          <div class="payment-icon">
+            <img src="images/upi-icon.svg" alt="UPI Apps">
+          </div>
+          <h3>UPI Apps</h3>
+          <p>Make instant payments using any UPI app including Google Pay, PhonePe, Paytm, and BHIM.</p>
+          <div class="payment-logos">
+            <img src="images/phonepay.png" alt="PhonePe">
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-icon">
+            <img src="images/banking-icon.svg" alt="Banking">
+          </div>
+          <h3>Banking</h3>
+          <p>Pay through direct bank transfers, NEFT, RTGS, or set up an auto-debit for hassle-free repayments.</p>
+          <div class="payment-links">
+            <a href="#">Auto-debit</a>
+            <a href="#">NEFT</a>
+            <a href="#">RTGS</a>
+            <a href="#">IMPS</a>
+          </div>
+        </div>
+        <div class="payment-card">
+          <div class="payment-icon">
+            <img src="images/card-icon.svg" alt="Credit/Debit Cards">
+          </div>
+          <h3>Credit/Debit Cards</h3>
+          <p>Make secure payments using any major credit or debit card, including Visa, MasterCard, and RuPay.</p>
+          <div class="payment-logos">
+            <img src="images/mastercard.png" alt="MasterCard">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>FinFlow</h3>
+          <p>Providing reliable financial solutions for your future needs.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="services.html#home-loan">Home Loans</a></li>
+            <li><a href="services.html#gold-loan">Gold Loans</a></li>
+            <li><a href="services.html#property-loan">Property Against Loans</a></li>
+            <li><a href="services.html#equity-loan">Home Equity Loans</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>123 Finance Street, Chennai, Tamil Nadu, India</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div>+91 9876543210</div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>support@finflow.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FinFlow. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="services.js"></script>
+</body>
+</html>
